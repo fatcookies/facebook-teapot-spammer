@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Teapot",
+  "description": "The extension which catches you off guard",
+  "version": "1.0",
+
+  "background": {
+    "scripts": ["js/jquery-1.12.2.min.js", "js/background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/?ref=iamteapot"],
+      "js": ["js/jquery-1.12.2.min.js","js/poststatus.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+   
+  "permissions": [
+    "idle",
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "https://*/*",
+    "tabs"
+  ]
+}
