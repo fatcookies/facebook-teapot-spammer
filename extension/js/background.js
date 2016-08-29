@@ -4,7 +4,7 @@ var currId;
 // ID of the facebook tab we create
 var fbId;
 
-chrome.idle.setDetectionInterval(240); // Check every four minutes
+chrome.idle.setDetectionInterval(20); // Check every four minutes
 chrome.idle.onStateChanged.addListener(function(newState) {
   if(newState === "idle") {
 
